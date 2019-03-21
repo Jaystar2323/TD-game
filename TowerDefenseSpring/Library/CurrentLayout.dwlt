@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 119
+  controlID: 37
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 79
+  controlID: 38
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 80
+  controlID: 39
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 237
     height: 578
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -212,14 +212,14 @@ MonoBehaviour:
     height: 578
   m_MinSize: {x: 204, y: 224}
   m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -384,9 +384,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 14a9f9ff
-      m_LastClickedID: -415468
-      m_ExpandedIDs: 14a9f9fffc9e0000
+      m_SelectedIDs: 20f0faff
+      m_LastClickedID: -331744
+      m_ExpandedIDs: 40f0faff30530000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -11.220923, y: 1.0000005, z: 6.11}
     speed: 2
-    m_Value: {x: -11.220923, y: 1.0000005, z: 6.11}
+    m_Value: {x: -7, y: 1.0000004, z: -17.78692}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -474,11 +474,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.27806392, y: 0.7105833, z: -0.37564722, w: -0.5259667}
     speed: 2
-    m_Value: {x: -0.27806392, y: 0.7105833, z: -0.37564722, w: -0.5259667}
+    m_Value: {x: 0.23194993, y: -0.04230282, z: 0.010102381, w: 0.9717549}
   m_Size:
     m_Target: 8.573655
     speed: 2
-    m_Value: 8.573655
+    m_Value: 2.143413
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -624,14 +624,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\s-hilkek\Desktop\TowerDefenseSpring
+  m_LastProjectPath: C:\Users\s-hilkek\Desktop\TD game\TD-game\TowerDefenseSpring
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 78260000
-    m_LastClickedID: 9848
-    m_ExpandedIDs: 0000000078260000082700006627000000ca9a3b
+    m_SelectedIDs: 7e260000
+    m_LastClickedID: 9854
+    m_ExpandedIDs: 000000007e2600000e2700006c27000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -659,7 +659,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000782600000827000066270000
+    m_ExpandedIDs: 000000007e2600000e2700006c270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

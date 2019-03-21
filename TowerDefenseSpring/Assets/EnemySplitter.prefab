@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 450
+  health: 400
   canMove: 0
   healthMultiplier: 18
   waveSpawner: {fileID: 0}
