@@ -23,4 +23,12 @@ public class Menues : MonoBehaviour
     {
         SceneManager.LoadScene(level + 1);
     }
+
+    public void quitGame()
+    {
+        Debug.Log("Quit game");
+        Application.Quit();
+        
+    }
+
 }

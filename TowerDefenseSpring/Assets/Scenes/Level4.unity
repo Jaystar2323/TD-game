@@ -1197,10 +1197,10 @@ RectTransform:
   m_Father: {fileID: 1635170603}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 577.55005, y: -250}
-  m_SizeDelta: {x: 99.9, y: 41}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -49.44995, y: 20}
+  m_SizeDelta: {x: 99.900024, y: 41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339573256
 MonoBehaviour:
@@ -3586,10 +3586,10 @@ RectTransform:
   m_Father: {fileID: 1635170603}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -577.5, y: -250}
-  m_SizeDelta: {x: 99.9, y: 41}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 49.5, y: 20}
+  m_SizeDelta: {x: 99.900024, y: 41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790714177
 MonoBehaviour:
@@ -6083,7 +6083,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 241921577add8164ea4698604d82c589,
+      objectReference: {fileID: 21300000, guid: acc7d4fc836869f40a723848028da91f,
         type: 3}
     - target: {fileID: 114432081677558598, guid: 55972417c9f868a43943400e55c1a57b,
         type: 3}
@@ -7890,10 +7890,10 @@ RectTransform:
   m_Father: {fileID: 1635170603}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 480.30005, y: 228.60004}
-  m_SizeDelta: {x: -960.5, y: -457.2}
+  m_AnchoredPosition: {x: -146.69995, y: -41.899963}
+  m_SizeDelta: {x: 293.5, y: 83.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786315530
 MonoBehaviour:
@@ -7909,10 +7909,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1563385119}
   HS: {fileID: 1850872560}
-  scoreLC: {fileID: 0}
-  moneyLC: {fileID: 0}
-  hsLC: {fileID: 0}
-  livesLC: {fileID: 0}
+  scoreLC: {fileID: 494979615}
+  moneyLC: {fileID: 2116763156}
+  hsLC: {fileID: 1195592475}
+  livesLC: {fileID: 1613257560}
 --- !u!114 &1786315531
 MonoBehaviour:
   m_ObjectHideFlags: 0
