@@ -33,7 +33,7 @@ public class Scoring : MonoBehaviour
     }
     void Update()
     {
-        //Debug.Log(scoreMultiplier);
+        Debug.Log(scoreMultiplier);
         if(text != null)
         {
             text.text = "Score: " + (int)score;
@@ -89,11 +89,11 @@ public class Scoring : MonoBehaviour
         }
         else if(enemy.name == "EnemySplitterSmall")
         {
-            baseScore += 110;
+            baseScore += 80;
         }
         else if(enemy.name == "EnemySplitter")
         {
-            baseScore += 80;
+            baseScore += 110;
         }
 
         calcScore(baseScore);
@@ -104,8 +104,8 @@ public class Scoring : MonoBehaviour
     {
         scoreMultiplier = 1;
         moneyValue = PlayerStats.money;
-        scoreMultiplier += WaveSpawner.lives * .3f;
-        scoreMultiplier += (towerSellValue + moneyValue) * 0.0008f;
+        scoreMultiplier += WaveSpawner.lives * .4f;
+        scoreMultiplier += (towerSellValue + (moneyValue * 1.2f)) * 0.00075f;
 
         score += baseScore * scoreMultiplier;
     }

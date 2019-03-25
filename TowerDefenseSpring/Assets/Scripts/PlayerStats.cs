@@ -12,6 +12,7 @@ public class PlayerStats : MonoBehaviour {
     void Start()
     {
         money = startMoney;
+        levelEnded = false;
     }
     void Update()
     {

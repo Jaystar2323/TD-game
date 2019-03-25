@@ -110,7 +110,7 @@ MonoBehaviour:
   speed: 10
   health: 60
   canMove: 1
-  healthMultiplier: 5
+  healthMultiplier: 8
   waveSpawner: {fileID: 0}
   effects: {fileID: 0}
 --- !u!114 &7304412575952366589

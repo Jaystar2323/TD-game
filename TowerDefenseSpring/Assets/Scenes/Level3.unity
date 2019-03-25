@@ -1976,9 +1976,10 @@ MonoBehaviour:
     type: 3}
   enemyFast2Prefab: {fileID: 4280695773442768, guid: 581965b643450794a8a44f7d0cf51963,
     type: 3}
-  enemySplitterPrefab: {fileID: 0}
+  enemySplitterPrefab: {fileID: 7651357741352730422, guid: 6fad47b42aeacc7428873f46afe04bed,
+    type: 3}
   gameOverScreen: {fileID: 1003666208}
-  levelComplete: {fileID: 0}
+  levelComplete: {fileID: 794627229}
   spawnPoint: {fileID: 924771541}
   timeBetweenWaves: 20
   waveCountdownText: {fileID: 270993374}
