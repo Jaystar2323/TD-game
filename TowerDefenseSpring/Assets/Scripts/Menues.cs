@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class Menues : MonoBehaviour
 {
     //public WaveSpawner waveSpawner;
+    public GameObject background1;
+    public GameObject background2;
+
     public void loadMainMenu()
     {
         SceneManager.LoadScene(0);
@@ -21,14 +24,29 @@ public class Menues : MonoBehaviour
     }
     public void loadLevel(int level)
     {
-        SceneManager.LoadScene(level + 1);
+        SceneManager.LoadScene(level + 2);
     }
-
+    public void loadHowToPlay()
+    {
+        SceneManager.LoadScene(2);
+    }
     public void quitGame()
     {
         Debug.Log("Quit game");
         Application.Quit();
         
+    }
+
+    public void switchToBackground1()
+    {
+        background1.SetActive(true);
+        background2.SetActive(false);
+
+    }
+    public void switchToBackground2()
+    {
+        background2.SetActive(true);
+        background1.SetActive(false);
     }
 
 }

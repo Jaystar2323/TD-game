@@ -28,12 +28,14 @@ public class Scoring : MonoBehaviour
     void Start()
     {
         Debug.Log("Score Start");
+        //PlayerPrefs.SetFloat("highScore" + currLevel, 0);
+
         currLevel = SceneManager.GetActiveScene().buildIndex;
         highScore = PlayerPrefs.GetFloat("highScore" + currLevel, 0);
     }
     void Update()
     {
-        Debug.Log(scoreMultiplier);
+        //Debug.Log(scoreMultiplier);
         if(text != null)
         {
             text.text = "Score: " + (int)score;
@@ -104,8 +106,8 @@ public class Scoring : MonoBehaviour
     {
         scoreMultiplier = 1;
         moneyValue = PlayerStats.money;
-        scoreMultiplier += WaveSpawner.lives * .4f;
-        scoreMultiplier += (towerSellValue + (moneyValue * 1.2f)) * 0.00075f;
+        scoreMultiplier += WaveSpawner.lives * .45f;
+        scoreMultiplier += (towerSellValue + (moneyValue * 1.2f)) * 0.00065f;
 
         score += baseScore * scoreMultiplier;
     }
