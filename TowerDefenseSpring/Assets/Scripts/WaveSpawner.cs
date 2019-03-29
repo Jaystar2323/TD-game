@@ -108,6 +108,10 @@ public class WaveSpawner : MonoBehaviour {
 
     IEnumerator SpawnWave()
     {
+        if(waveNumber >= totalWaveCount)
+        {
+            yield break;
+        }
         waveNumber += 1;
         timeBetweenWaves += 1f;
 

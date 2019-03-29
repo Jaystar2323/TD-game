@@ -2178,7 +2178,7 @@ MonoBehaviour:
   livesText: {fileID: 1774393109}
   totalWaveCount: 13
   wave1:
-    numCluster: 5
+    numCluster: 8
     numCluster2: 0
     numFast: 0
     numBig: 0
@@ -2186,19 +2186,19 @@ MonoBehaviour:
     numFast2: 0
     numSplitter: 0
     timeBetweenSpawns: 2
-    waveCount: 5
+    waveCount: 8
   wave2:
     numCluster: 0
     numCluster2: 0
-    numFast: 10
+    numFast: 15
     numBig: 0
     numNormal: 0
     numFast2: 0
     numSplitter: 0
     timeBetweenSpawns: 1.5
-    waveCount: 10
+    waveCount: 15
   wave3:
-    numCluster: 5
+    numCluster: 8
     numCluster2: 0
     numFast: 0
     numBig: 0
@@ -2206,7 +2206,7 @@ MonoBehaviour:
     numFast2: 0
     numSplitter: 0
     timeBetweenSpawns: 2.5
-    waveCount: 5
+    waveCount: 8
   wave4:
     numCluster: 10
     numCluster2: 0
@@ -2222,10 +2222,10 @@ MonoBehaviour:
     numCluster2: 0
     numFast: 15
     numBig: 0
-    numNormal: 0
+    numNormal: 5
     numFast2: 0
     numSplitter: 0
-    timeBetweenSpawns: 0.5
+    timeBetweenSpawns: 0.75
     waveCount: 15
   wave6:
     numCluster: 7
@@ -2270,13 +2270,13 @@ MonoBehaviour:
   wave10:
     numCluster: 0
     numCluster2: 10
-    numFast: 10
+    numFast: 15
     numBig: 4
     numNormal: 0
     numFast2: 0
     numSplitter: 0
     timeBetweenSpawns: 2
-    waveCount: 10
+    waveCount: 15
   wave11:
     numCluster: 0
     numCluster2: 15
@@ -2304,7 +2304,7 @@ MonoBehaviour:
     numBig: 0
     numNormal: 15
     numFast2: 5
-    numSplitter: 0
+    numSplitter: 1
     timeBetweenSpawns: 1.5
     waveCount: 20
   wave14:
