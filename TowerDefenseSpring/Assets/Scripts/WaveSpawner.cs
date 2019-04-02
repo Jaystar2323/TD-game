@@ -96,6 +96,7 @@ public class WaveSpawner : MonoBehaviour {
             if(enemies.Length == 0)
             {
                 this.levelComplete.SetActive(true);
+                Scoring.checkScore();
                 PlayerStats.levelEnd();
             }
         }

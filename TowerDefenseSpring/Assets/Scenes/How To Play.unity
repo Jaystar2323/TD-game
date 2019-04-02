@@ -146,9 +146,9 @@ RectTransform:
   m_Father: {fileID: 907709671}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 542, y: -204.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -85.5, y: 67.5}
   m_SizeDelta: {x: 170, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151146392
@@ -275,7 +275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184, y: -79}
+  m_AnchoredPosition: {x: -100.650024, y: -103.75}
   m_SizeDelta: {x: 160, y: 52.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &197668902
@@ -892,7 +892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.8, y: -184.2}
+  m_AnchoredPosition: {x: -105, y: -215}
   m_SizeDelta: {x: 151.3, y: 156.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772047573
@@ -1854,8 +1854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194, y: -156.25}
-  m_SizeDelta: {x: 188.7, y: 52.5}
+  m_AnchoredPosition: {x: 231, y: -158.8}
+  m_SizeDelta: {x: 188.7, y: 148.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1176732598
 MonoBehaviour:
@@ -1890,8 +1890,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Use scroll wheel to zoom in and move the cursor to the edge to move the
-    camera
+  m_Text: 'Controls
+
+
+    Left click to select towers
+
+
+    Scroll Wheel to zoom
+
+
+    Move cursor to edge of the screen to move camera'
 --- !u!222 &1176732599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2661,9 +2669,9 @@ RectTransform:
   m_Father: {fileID: 907709671}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 541.99994, y: -248.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -85.50006, y: 23.5}
   m_SizeDelta: {x: 170, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947979178

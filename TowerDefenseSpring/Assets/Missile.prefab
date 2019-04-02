@@ -123,7 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   explosionRadius: 7
-  impactEffect: {fileID: 1898828726733436, guid: a08b19edabba44e45b4d6d1608f021b0,
-    type: 3}
+  impactEffect: {fileID: 95, guid: a08b19edabba44e45b4d6d1608f021b0, type: 3}
   defaultMaterial: {fileID: 2100000, guid: 1a72ad4c70d9c8a408e6d866d4fb21b1, type: 2}
   useDefaultMaterial: 1

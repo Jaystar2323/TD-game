@@ -35,7 +35,7 @@ public class Scoring : MonoBehaviour
     }
     void Update()
     {
-        //Debug.Log(scoreMultiplier);
+        Debug.Log(scoreMultiplier);
         if(text != null)
         {
             text.text = "Score: " + (int)score;
@@ -106,7 +106,7 @@ public class Scoring : MonoBehaviour
     {
         scoreMultiplier = 1;
         moneyValue = PlayerStats.money;
-        scoreMultiplier += WaveSpawner.lives * .45f;
+        scoreMultiplier += WaveSpawner.lives * .65f;
         scoreMultiplier += (towerSellValue + (moneyValue * 1.2f)) * 0.00065f;
 
         score += baseScore * scoreMultiplier;
@@ -121,11 +121,7 @@ public class Scoring : MonoBehaviour
     {
         towerSellValue = 0;
         moneyValue = 0;
-        if (score > highScore)
-        {
-            highScore = score;
-            PlayerPrefs.SetFloat("highScore" + currLevel, highScore);
-        }
+        
         //if (score > 0)
         //{
         //    gameEnded = true;
@@ -134,6 +130,15 @@ public class Scoring : MonoBehaviour
         scoreMultiplier = 0;
         score = 0;
 
+    }
+
+    public static void checkScore()
+    {
+        if (score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetFloat("highScore" + currLevel, highScore);
+        }
     }
 
 
