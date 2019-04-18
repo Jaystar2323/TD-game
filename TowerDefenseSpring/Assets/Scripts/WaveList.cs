@@ -11,6 +11,7 @@ public class WaveList{
     public float numNormal;
     public float numFast2;
     public float numSplitter;
+    public float numHealer;
     public float timeBetweenSpawns;
     public float waveCount;
     
@@ -24,6 +25,7 @@ public class WaveList{
         numNormal *= 2;
         numFast2 *= 2;
         numSplitter *= 2;
+        numHealer *= 2;
         //float current = numCluster;
         //if (current < numCluster2)
         //{

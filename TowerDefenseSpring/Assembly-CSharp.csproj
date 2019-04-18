@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\CameraControler.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyCluster.cs" />
+     <Compile Include="Assets\Scripts\EnemyHealer.cs" />
      <Compile Include="Assets\Scripts\EnemySplitter.cs" />
      <Compile Include="Assets\Scripts\HealthBars.cs" />
      <Compile Include="Assets\Scripts\Menues.cs" />

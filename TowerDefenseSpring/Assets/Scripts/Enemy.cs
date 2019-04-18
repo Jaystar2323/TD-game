@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
     public float health = 20f;
     protected Transform target;
     private int wavepointIndex = 0;
-    private float maxHealth;
+    protected float maxHealth;
     private float pTickCountdown;
     public bool canMove = true;
     public float healthMultiplier = 1.0f;
@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour {
             Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 10).eulerAngles;
             transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
         }
-        
+        doUpdate();
     }
 
     void CheckEffects()
@@ -109,6 +109,15 @@ public class Enemy : MonoBehaviour {
             KillEnemy();
             Scoring.scoreKill(this);
         }
+        onHit();
+    }
+    public virtual void onHit()
+    {
+        return;
+    }
+    public virtual void doUpdate()
+    {
+        return;
     }
     public virtual void KillEnemy()
     {

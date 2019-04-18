@@ -12,6 +12,7 @@ public class WaveSpawner : MonoBehaviour {
     public Transform enemySmall2Prefab;
     public Transform enemyFast2Prefab;
     public Transform enemySplitterPrefab;
+    public Transform enemyHealerPrefab;
 
     public GameObject gameOverScreen;
     public GameObject levelComplete;
@@ -199,6 +200,11 @@ public class WaveSpawner : MonoBehaviour {
             {
                 waves[waveNumber - 1].numSplitter -= 1;
                 Instantiate(enemySplitterPrefab, spawnPoint.position, spawnPoint.rotation);
+            }
+            if(waves[waveNumber -1].numHealer > 0)
+            {
+                waves[waveNumber - 1].numHealer -= 1;
+                Instantiate(enemyHealerPrefab, spawnPoint.position, spawnPoint.rotation);
             }
             //Debug.Log(waves[waveNumber - 1].timeBetweenSpawns);
             yield return new WaitForSeconds(waves[waveNumber-1].timeBetweenSpawns);
