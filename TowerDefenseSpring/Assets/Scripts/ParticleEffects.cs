@@ -6,7 +6,8 @@ public class ParticleEffects : MonoBehaviour
 {
 
     public GameObject poisonEffect;
-    public GameObject healEffect;
+    public Animator healEffect;
+    public Material healMaterial;
    // public GameObject slowEffect;
     private float durationP;
     private float durationS;
@@ -19,6 +20,11 @@ public class ParticleEffects : MonoBehaviour
     void Start()
     {
         poisonEffect.SetActive(false);
+        if (healEffect != null)
+        {
+            healEffect.StopPlayback();
+        } 
+        healActive = false;
       //  slowEffect.SetActive(false);
     }
     void Update()
@@ -44,28 +50,36 @@ public class ParticleEffects : MonoBehaviour
 
         if(healEffect != null && healActive)
         {
-            pulseTime += Time.deltaTime;
-            if(pulseTime >= .1)
+            healEffect.StartPlayback();
+            if (healEffect.playbackTime >= 0 && healEffect.playbackTime <= 1 && deactivateLight)
             {
-               //ebug.Log("working");
-                
-                if (healEffect.GetComponent<Light>().intensity <= 0)
-                {
-                    increase = 1;
-                    if (deactivateLight)
-                    {
-                        healActive = false;
-                        return;
-                    }
-                }
-                if (healEffect.GetComponent<Light>().intensity >= 10)
-                {
-                    increase = -1;
-                }
-                Debug.Log(increase);
-                healEffect.GetComponent<Light>().intensity += increase;
-                pulseTime = 0;
+                healEffect.playbackTime = 0;
+                healEffect.StopPlayback();
+                healActive = false;
             }
+            //pulseTime += Time.deltaTime;
+            //if(pulseTime >= .1)
+            //{
+            //    //ebug.Log("working");
+            //    Debug.Log(healMaterial.);
+            //    if (healEffect.GetComponent<Light>().intensity <= 0)
+            //    {
+            //        increase = 2;
+            //        if (deactivateLight)
+            //        {
+            //            healActive = false;
+            //            return;
+            //        }
+            //    }
+            //    if (healEffect.GetComponent<Light>().intensity >= 20)
+            //    {
+            //        increase = -2;
+            //    }
+            //    Debug.Log(increase);
+            //    healEffect.GetComponent<Light>().intensity += increase;
+            //    pulseTime = 0;
+            //}
+
         }
 
     }
