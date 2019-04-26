@@ -9663,9 +9663,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4101064890122016}
   - component: {fileID: 114439478930594690}
+  - component: {fileID: 9202421485175932884}
   m_Layer: 0
   m_Name: MissileLauncher
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9717,6 +9718,19 @@ MonoBehaviour:
   tier3: {fileID: 1279853167260152}
   bullet: {fileID: 1842874302594694, guid: a53f6d9c4c3b2c840bf3b10926fd8742, type: 3}
   firePoint: {fileID: 4580847361575940}
+--- !u!114 &9202421485175932884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324051795750652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a1049d482f1f34091d5e2595215e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 114439478930594690}
 --- !u!1 &1444921464427588
 GameObject:
   m_ObjectHideFlags: 0

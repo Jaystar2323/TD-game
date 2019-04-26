@@ -71,9 +71,9 @@ public class CameraControler : MonoBehaviour {
 
         Quaternion rotation = transform.rotation;
         rotation.x -= scroll * 7 * Time.deltaTime;
-        Debug.Log(rotation.x);
+       // Debug.Log(rotation.x);
         rotation.x = Mathf.Clamp(rotation.x, minRotation, maxRotation);
-        Debug.Log(rotation.x);
+       // Debug.Log(rotation.x);
         transform.rotation = rotation;
 
         pos.y -= scroll * 500 * scrollSpeed * Time.deltaTime;

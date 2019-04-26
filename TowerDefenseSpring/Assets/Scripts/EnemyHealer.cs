@@ -9,14 +9,14 @@ public class EnemyHealer : Enemy
 
     public override void doUpdate()
     {
-        if (timeSinceHit >= 5 && health != maxHealth)
+        if (timeSinceHit >= 3.5 && health != maxHealth)
         {
             //regen effect
             effects.activeHeal();
             healTick += Time.deltaTime;
             if(healTick >= 1)
             {
-                this.health += 3;
+                this.health += 8;
                 healTick = 0;
             }
             if(this.health >= this.maxHealth)

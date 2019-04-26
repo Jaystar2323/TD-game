@@ -32,14 +32,17 @@ public class HealthBars : MonoBehaviour
         this.transform.localScale = currentSize;
         //this.healthBar.transform.rotation = Quaternion.Euler(90f, parentEnemy.transform.rotation.y * -1 + 90, 0f);
 
-        if (healthPercentage <= .5)
+        if(healthPercentage > .5)
+        {
+            healthBar.GetComponent<MeshRenderer>().material = greenMaterial;
+        }
+        if (healthPercentage <= .5 && healthPercentage > .25)
         {
             healthBar.GetComponent<MeshRenderer>().material = yellowMaterial;
-            if(healthPercentage <= .25)
-            {
-                healthBar.GetComponent<MeshRenderer>().material = redMaterial;
-            }
-            
+        }
+        if (healthPercentage <= .25)
+        {
+            healthBar.GetComponent<MeshRenderer>().material = redMaterial;
         }
 
 

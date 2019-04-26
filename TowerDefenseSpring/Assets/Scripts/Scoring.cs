@@ -35,7 +35,7 @@ public class Scoring : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(scoreMultiplier);
+        //Debug.Log(scoreMultiplier);
         if(text != null)
         {
             text.text = "Score: " + (int)score;
@@ -75,27 +75,30 @@ public class Scoring : MonoBehaviour
         }
         else if (enemy.name == "EnemyBig(Clone)")
         {
-            baseScore += 125;
+            baseScore += 150;
         }
         else if (enemy.name == "EnemySmall")
         {
             baseScore += 15;
         }
-        else if(enemy.name == "EnemySmall2")
+        else if (enemy.name == "EnemySmall2")
         {
             baseScore += 20;
         }
-        else if(enemy.name == "EnemyFast2(Clone)")
+        else if (enemy.name == "EnemyFast2(Clone)")
         {
             baseScore += 90;
         }
-        else if(enemy.name == "EnemySplitterSmall")
+        else if (enemy.name == "EnemySplitterSmall")
         {
             baseScore += 80;
         }
-        else if(enemy.name == "EnemySplitter")
+        else if (enemy.name == "EnemySplitter(Clone)")
         {
             baseScore += 110;
+        } else if (enemy.name == "EnemyHealer(Clone)")
+        {
+            baseScore += 75;
         }
 
         calcScore(baseScore);

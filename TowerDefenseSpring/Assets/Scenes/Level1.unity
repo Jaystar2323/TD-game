@@ -2417,6 +2417,7 @@ MonoBehaviour:
   enemyFast2Prefab: {fileID: 4280695773442768, guid: 581965b643450794a8a44f7d0cf51963,
     type: 3}
   enemySplitterPrefab: {fileID: 0}
+  enemyHealerPrefab: {fileID: 0}
   gameOverScreen: {fileID: 1003666208}
   levelComplete: {fileID: 353382281}
   spawnPoint: {fileID: 924771541}
@@ -2433,6 +2434,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 2.2
     waveCount: 5
   wave2:
@@ -2443,6 +2445,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 2
     waveCount: 5
   wave3:
@@ -2453,6 +2456,7 @@ MonoBehaviour:
     numNormal: 10
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 2
     waveCount: 10
   wave4:
@@ -2463,6 +2467,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 2
     waveCount: 10
   wave5:
@@ -2473,6 +2478,7 @@ MonoBehaviour:
     numNormal: 8
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 2.5
     waveCount: 10
   wave6:
@@ -2483,6 +2489,7 @@ MonoBehaviour:
     numNormal: 5
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 1.5
     waveCount: 10
   wave7:
@@ -2493,6 +2500,7 @@ MonoBehaviour:
     numNormal: 8
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 1.5
     waveCount: 15
   wave8:
@@ -2503,6 +2511,7 @@ MonoBehaviour:
     numNormal: 15
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 1.5
     waveCount: 15
   wave9:
@@ -2513,6 +2522,7 @@ MonoBehaviour:
     numNormal: 5
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 2.5
     waveCount: 10
   wave10:
@@ -2523,6 +2533,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 1.25
     waveCount: 10
   wave11:
@@ -2533,6 +2544,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 0
     waveCount: 0
   wave12:
@@ -2543,6 +2555,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 0
     waveCount: 0
   wave13:
@@ -2553,6 +2566,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 0
     waveCount: 0
   wave14:
@@ -2563,6 +2577,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 0
     waveCount: 0
   wave15:
@@ -2573,6 +2588,7 @@ MonoBehaviour:
     numNormal: 0
     numFast2: 0
     numSplitter: 0
+    numHealer: 0
     timeBetweenSpawns: 0
     waveCount: 0
 --- !u!4 &618220936
@@ -4380,7 +4396,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -4465,10 +4481,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6306,8 +6322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -49.44995, y: 18}
-  m_SizeDelta: {x: 99.900024, y: 41}
+  m_AnchoredPosition: {x: -60.95, y: 23.5}
+  m_SizeDelta: {x: 122, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621576254
 MonoBehaviour:
@@ -6553,8 +6569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 49.5, y: 18}
-  m_SizeDelta: {x: 99.900024, y: 41}
+  m_AnchoredPosition: {x: 60.5, y: 21.2}
+  m_SizeDelta: {x: 122, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1635583135
 MonoBehaviour:

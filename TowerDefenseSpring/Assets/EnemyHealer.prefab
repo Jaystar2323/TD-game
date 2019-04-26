@@ -108,10 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a524d89a2b7264dbf115511d624b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
   health: 100
   canMove: 1
-  healthMultiplier: 8
+  healthMultiplier: 18
   waveSpawner: {fileID: 0}
   effects: {fileID: 0}
 --- !u!114 &991563710776372920

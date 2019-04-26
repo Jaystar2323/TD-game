@@ -93,7 +93,7 @@ public class Enemy : MonoBehaviour {
                 PlayerStats.money += 18;
             }else if (this.name == "EnemyBig(Clone)" || this.name == "EnemyFast2(Clone)")
             {
-                PlayerStats.money += 30;
+                PlayerStats.money += 40;
             }else if (this.name == "EnemySmall" || this.name == "EnemySmall2")
             {
                 PlayerStats.money += 10;
@@ -102,9 +102,12 @@ public class Enemy : MonoBehaviour {
             {
                 PlayerStats.money += 20;
             }
-            else if (this.name == "EnemySplitter")
+            else if (this.name == "EnemySplitter(Clone)")
             {
                 PlayerStats.money += 26;
+            }else if(this.name == "EnemyHealer(Clone)")
+            {
+                PlayerStats.money += 20;
             }
             KillEnemy();
             Scoring.scoreKill(this);

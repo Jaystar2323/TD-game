@@ -143,9 +143,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4423824052449592}
   - component: {fileID: 114071348936098444}
+  - component: {fileID: 3024140290174550436}
   m_Layer: 0
   m_Name: StandardTurret
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,6 +198,20 @@ MonoBehaviour:
   tier3: {fileID: 1510833013103340}
   bullet: {fileID: 1646191878026312, guid: 77dae2177751e0b4eaa1f09342a72a87, type: 3}
   firePoint: {fileID: 4613188816454918}
+--- !u!114 &3024140290174550436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278908548352922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a1049d482f1f34091d5e2595215e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 114071348936098444}
+  multiplier: 0
 --- !u!1 &1419324880537616
 GameObject:
   m_ObjectHideFlags: 0

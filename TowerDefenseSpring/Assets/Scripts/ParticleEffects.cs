@@ -16,19 +16,26 @@ public class ParticleEffects : MonoBehaviour
     private float pulseTime = 0;
     private int increase = 0;
 
-    // Update is called once per frame
     void Start()
     {
+        Debug.Log("hi");
         poisonEffect.SetActive(false);
-        if (healEffect != null)
-        {
-            healEffect.StopPlayback();
-        } 
+        //if (healEffect != null)
+        //{
+        //    //healEffect.playbackTime = 0;
+        //    healEffect.StopPlayback();
+        //    Debug.Log(true);
+        //}
+        //healEffect.StopPlayback();
         healActive = false;
       //  slowEffect.SetActive(false);
     }
     void Update()
     {
+        //if (!healActive && healEffect.play)
+        //{
+        //    healEffect.StopPlayback();
+        //}
         if(durationP <= 0)
         {
             durationP = 0;
@@ -50,14 +57,30 @@ public class ParticleEffects : MonoBehaviour
 
         if(healEffect != null && healActive)
         {
-            healEffect.StartPlayback();
-            if (healEffect.playbackTime >= 0 && healEffect.playbackTime <= 1 && deactivateLight)
+             //Debug.Log("update");
+            //if (healEffect.playbackTime == 0)
+            //{
+            if (healActive && pulseTime >= 1)
             {
-                healEffect.playbackTime = 0;
-                healEffect.StopPlayback();
+                Debug.Log("Works");
+                healEffect.Play("HealingGlow", -1, 0f);
+                pulseTime = 0;
+
+            }
+            if(deactivateLight && pulseTime == 0)
+            {
                 healActive = false;
             }
-            //pulseTime += Time.deltaTime;
+
+
+            //}
+            //if (healEffect.playbackTime >= 0 && healEffect.playbackTime <= 1 && deactivateLight)
+            //{
+            //    healEffect.playbackTime = 0;
+            //    healEffect.StopPlayback();
+            //    healActive = false;
+            //}
+            pulseTime += Time.deltaTime;
             //if(pulseTime >= .1)
             //{
             //    //ebug.Log("working");

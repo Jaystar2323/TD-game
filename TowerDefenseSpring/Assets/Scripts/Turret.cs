@@ -15,6 +15,7 @@ public class Turret : MonoBehaviour {
     public float upgradeRangeIncrease = 0;
     protected float fireCountdown = 0f;
     private int upgradeTier = 0;
+    protected float baseDamage;
     //public bool damageInRange = false;
 
 
@@ -35,6 +36,7 @@ public class Turret : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("UpdateTarget", 0f, 0.2f);
+        baseDamage = damage;
         tier1.SetActive(true);
 	}
 	
@@ -153,6 +155,7 @@ public class Turret : MonoBehaviour {
     {
         upgradeTier += 1;
         damage += upgradeDmgIncrease;
+        baseDamage += upgradeDmgIncrease;
         fireRate += upgradeFireRateIncrease;
         range += upgradeRangeIncrease;
         if (upgradeTier == 1)
@@ -165,6 +168,16 @@ public class Turret : MonoBehaviour {
             tier2.SetActive(false);
             tier3.SetActive(true);
         }
+    }
+
+    public void increaseDamage(float multiplier)
+    {
+        damage = baseDamage * multiplier;
+        Debug.Log("Incease");
+    }
+    public void damageReset()
+    {
+        damage = baseDamage;
     }
 
 }
