@@ -28,6 +28,10 @@ public class TurretDamageBoost : Turret
     // Update is called once per frame
     void Update()
     {
+        if(turrets == null)
+        {
+            return;
+        }
         foreach (GameObject turret in turrets)
         {
             turret.GetComponent<AttackDmgEffect>().resetTimer(damageMultiplier);
@@ -35,8 +39,11 @@ public class TurretDamageBoost : Turret
         }
     }
 
-    public void Upgrade()
+    public override void upgrade()
     {
+
+        Debug.Log("upgrade");
+        base.upgrade();
         if(getUpgradeTier() == 1)
         {
             damageMultiplier += upgradeMultiplierIncrease;

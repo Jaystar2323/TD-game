@@ -6,6 +6,7 @@ public class EnemySplitter : EnemyCluster
 {
     private GameObject enemySplit;
     private GameObject enemySplitter;
+    private bool paid = false;
     void Start()
     {
         enemySplit = transform.GetChild(1).gameObject;
@@ -25,6 +26,11 @@ public class EnemySplitter : EnemyCluster
     {
         if(enemySplitter == null)
         {
+            if (!paid)
+            {
+                paid = true;
+                PlayerStats.money += 26;
+            }
             enemySplit.SetActive(true);
             speed = 14;
         }

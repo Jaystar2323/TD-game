@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class TowerOptions : MonoBehaviour {
 
     public static Turret turret;
+    public static bool isDamageTurret = false;
     public Text upgradeCostText;
     public Text sellAmountText;
     public Text damageText;
     public Text fireRateText;
     public Text rangeText;
+    public Text multiplierText;
     public Shop shop;
     private int upgradeCost;
     private int sellMoney;
@@ -45,9 +47,18 @@ public class TowerOptions : MonoBehaviour {
             sellAmountText.text = "$"+ ((int)((turret.upgradeCost / 2 * .75) + (int)(turret.upgradeCost * 2 * .75) + (int)(turret.upgradeCost * .75))).ToString();
         }
 
-        damageText.text = "Damage: " + turret.damage.ToString();
+        damageText.text = "Damage: " + Mathf.Round(turret.damage).ToString();
         fireRateText.text = "Fire Rate: " + turret.fireRate.ToString();
         rangeText.text = "Range: " + turret.range.ToString();
+        if (isDamageTurret)
+        {
+            multiplierText.gameObject.SetActive(true);
+            multiplierText.text = "Multiplier: " + turret.GetComponent<TurretDamageBoost>().damageMultiplier;
+        }
+        else
+        {
+            multiplierText.gameObject.SetActive(false);
+        }
         
 
 	}
@@ -55,6 +66,14 @@ public class TowerOptions : MonoBehaviour {
     public static void setTurret(GameObject turret)
     {
         TowerOptions.turret = turret.GetComponent<Turret>();
+        if(turret.GetComponent<TurretDamageBoost>() != null)
+        {
+            isDamageTurret = true;
+        }
+        else
+        {
+            isDamageTurret = false;
+        }
     }
 
     public void UpgradeTower()

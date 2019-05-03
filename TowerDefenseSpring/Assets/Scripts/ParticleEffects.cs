@@ -18,7 +18,7 @@ public class ParticleEffects : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("hi");
+        //Debug.Log("hi");
         poisonEffect.SetActive(false);
         //if (healEffect != null)
         //{
@@ -62,7 +62,7 @@ public class ParticleEffects : MonoBehaviour
             //{
             if (healActive && pulseTime >= 1)
             {
-                Debug.Log("Works");
+                //Debug.Log("Works");
                 healEffect.Play("HealingGlow", -1, 0f);
                 pulseTime = 0;
 

@@ -113,6 +113,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3106308855924890064, guid: e1c845f959e4e4040a263fdb3dd36ec9,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemySplitterSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153879889201550001, guid: e1c845f959e4e4040a263fdb3dd36ec9,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemySplitterSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725767848793957571, guid: e1c845f959e4e4040a263fdb3dd36ec9,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemySplitterSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790942908901066257, guid: e1c845f959e4e4040a263fdb3dd36ec9,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemySplitterSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247198398530388669, guid: e1c845f959e4e4040a263fdb3dd36ec9,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemySplitterSmall
+      objectReference: {fileID: 0}
     - target: {fileID: 21671592960608723, guid: e1c845f959e4e4040a263fdb3dd36ec9,
         type: 3}
       propertyPath: health

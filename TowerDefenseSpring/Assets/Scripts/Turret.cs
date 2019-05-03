@@ -151,7 +151,7 @@ public class Turret : MonoBehaviour {
     {
         return upgradeTier;
     }
-    public void upgrade()
+    public virtual void upgrade()
     {
         upgradeTier += 1;
         damage += upgradeDmgIncrease;
@@ -173,7 +173,7 @@ public class Turret : MonoBehaviour {
     public void increaseDamage(float multiplier)
     {
         damage = baseDamage * multiplier;
-        Debug.Log("Incease");
+        //Debug.Log("Incease");
     }
     public void damageReset()
     {
