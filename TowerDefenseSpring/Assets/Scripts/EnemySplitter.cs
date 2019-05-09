@@ -24,16 +24,18 @@ public class EnemySplitter : EnemyCluster
     //}
     public override void doUpdate()
     {
-        if(enemySplitter == null)
-        {
-            if (!paid)
-            {
-                paid = true;
-                PlayerStats.money += 26;
-            }
-            enemySplit.SetActive(true);
-            speed = 14;
-        }
+        //if(enemySplitter == null)
+        //{
+            
+            
+            
+        //}
+        //if(enemySplitter != null)
+        //{
+        //    Debug.Log("hi");
+        //    //enemySplit.GetComponentInChildren<Enemy>().setWaypointIndex(enemySplitter.GetComponent<Enemy>().getWayPointIndex());
+            
+        //}
     }
 
     public override int livesLostCount()
@@ -47,6 +49,17 @@ public class EnemySplitter : EnemyCluster
             return 6;
         }
     }
-
+    public void onDeath()
+    {
+        //Debug.Log("death");
+        speed = 14;
+        enemySplit.SetActive(true);
+        PlayerStats.money += 26;
+        foreach (Transform child in enemySplit.transform)
+        {
+            child.GetComponent<Enemy>().setWaypointIndex(enemySplitter.GetComponent<Enemy>().getWayPointIndex());
+            //Debug.Log(enemySplitter.GetComponent<Enemy>().getWayPointIndex());
+        }
+    }
 
 }

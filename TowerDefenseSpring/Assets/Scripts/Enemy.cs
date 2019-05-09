@@ -14,16 +14,19 @@ public class Enemy : MonoBehaviour {
     public float healthMultiplier = 1.0f;
     public WaveSpawner waveSpawner;
     public ParticleEffects effects;
+    public float targetLevel;
+  
 
 
     void Start()
     {
         //Debug.Log(Waypoints.points[0]);
-        target = Waypoints.points[0];
+        target = Waypoints.points[wavepointIndex];
         waveSpawner = GameObject.Find("GameControl").GetComponent<WaveSpawner>();
         health += waveSpawner.getWaveNumber() * healthMultiplier;
         maxHealth = health;
         effects = this.GetComponent<ParticleEffects>();
+        targetLevel = 0;
         
         
     }
@@ -34,16 +37,26 @@ public class Enemy : MonoBehaviour {
         {
             Vector3 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-
+            Quaternion lookRotation = Quaternion.LookRotation(dir);
+            Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 10).eulerAngles;
+            transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
             if (Vector3.Distance(transform.position, target.position) <= 0.4f)
             {
                 GetNextWaypoint();
 
             }
-            Quaternion lookRotation = Quaternion.LookRotation(dir);
-            Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 10).eulerAngles;
-            transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
         }
+        else
+        {
+            if (Vector3.Distance(transform.position, target.position) <= 2f)
+            {
+                GetNextWaypoint();
+                
+
+            }
+        }
+        
+        targetLevel = wavepointIndex - (Vector3.Distance(transform.position, target.position) / 100);
         doUpdate();
     }
 
@@ -109,6 +122,7 @@ public class Enemy : MonoBehaviour {
             {
                 PlayerStats.money += 25;
             }
+            onDeath();
             KillEnemy();
             Scoring.scoreKill(this);
         }
@@ -126,14 +140,23 @@ public class Enemy : MonoBehaviour {
     {
         Destroy(this.gameObject);
     }
-    //public void setWaypointIndex(int index)
-    //{
-    //    this.wavepointIndex = index;
-    //}
-    //public int getWayPointIndex()
-    //{
-    //    return wavepointIndex;
-    //}
+    public float getTargetLevel()
+    {
+        return targetLevel;
+    }
+    public void setWaypointIndex(int index)
+    {
+        this.wavepointIndex = index;
+        target = Waypoints.points[wavepointIndex];
+        //Debug.Log(target);
+    }
+    public int getWayPointIndex()
+    {
+        return wavepointIndex;
+    }
+    public virtual void onDeath()
+    {
 
+    }
 
 }

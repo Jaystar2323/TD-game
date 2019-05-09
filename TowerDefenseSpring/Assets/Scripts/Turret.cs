@@ -30,11 +30,12 @@ public class Turret : MonoBehaviour {
     public GameObject bullet;
     public Transform firePoint;
     protected ArrayList enemies = new ArrayList();
-    
+    public bool targetHighestPriority = true;
 
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         InvokeRepeating("UpdateTarget", 0f, 0.2f);
         baseDamage = damage;
         tier1.SetActive(true);
@@ -63,18 +64,37 @@ public class Turret : MonoBehaviour {
         //}
 
         float shortestDistance = Mathf.Infinity;
+        float highest = -100000000;
+        
         GameObject nearestEnemy = null;
         foreach(GameObject enemy in allEnemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if(distanceToEnemy < shortestDistance)
+            if (distanceToEnemy > range)
             {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
+                continue;
             }
+            if (targetHighestPriority)
+            {
+                if (enemy.GetComponent<Enemy>().getTargetLevel() > highest)
+                {
+                    highest = enemy.GetComponent<Enemy>().getTargetLevel();
+                    nearestEnemy = enemy;
+                }
+            }
+            else
+            {
+                if(distanceToEnemy < shortestDistance)
+                {
+                    nearestEnemy = enemy;
+                    shortestDistance = distanceToEnemy;
+                }
+            }
+            
+
         }
 
-        if(nearestEnemy != null && shortestDistance <= range)
+        if(nearestEnemy != null)
         {
             target = nearestEnemy.transform;
             //Debug.Log("Target Found");

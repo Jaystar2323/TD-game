@@ -9718,6 +9718,7 @@ MonoBehaviour:
   tier3: {fileID: 1279853167260152}
   bullet: {fileID: 1842874302594694, guid: a53f6d9c4c3b2c840bf3b10926fd8742, type: 3}
   firePoint: {fileID: 4580847361575940}
+  targetHighestPriority: 0
 --- !u!114 &9202421485175932884
 MonoBehaviour:
   m_ObjectHideFlags: 0

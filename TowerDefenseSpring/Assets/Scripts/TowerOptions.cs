@@ -57,7 +57,10 @@ public class TowerOptions : MonoBehaviour {
         }
         else
         {
-            multiplierText.gameObject.SetActive(false);
+            if(multiplierText != null)
+            {
+                multiplierText.gameObject.SetActive(false);
+            }
         }
         
 
