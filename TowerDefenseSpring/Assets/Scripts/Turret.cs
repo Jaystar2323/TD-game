@@ -13,6 +13,7 @@ public class Turret : MonoBehaviour {
     public float upgradeDmgIncrease = 1;
     public float upgradeFireRateIncrease = 0;
     public float upgradeRangeIncrease = 0;
+    //public bool slowsTarget = false;
     protected float fireCountdown = 0f;
     private int upgradeTier = 0;
     protected float baseDamage;

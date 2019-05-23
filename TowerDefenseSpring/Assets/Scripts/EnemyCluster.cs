@@ -7,12 +7,13 @@ public class EnemyCluster : MonoBehaviour {
     // Use this for initialization
     private int wavepointIndex = 0;
     protected Transform target;
-    public int speed;
+    public float speed;
+    protected float maxSpeed;
     void Start()
     {
         //Debug.Log(Waypoints.points[0]);
         target = Waypoints.points[0];
-
+        maxSpeed = speed;
     }
 
     void Update()
@@ -29,7 +30,25 @@ public class EnemyCluster : MonoBehaviour {
         Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 10).eulerAngles;
         transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
         doUpdate();
+        
+        //foreach (Transform enemy in transform)
+        //{
+        //    if(enemy.GetComponent<Enemy>().getSlowDur() > 0)
+        //    {
+        //        speed = (maxSpeed * .5f);
+        //        break;
+        //    }
+        //    else
+        //    {
+        //        count++;
+        //    }
 
+        //}
+        checkSlowEffect();
+        //if(count == transform.childCount)
+        //{
+        //    speed = maxSpeed;
+        //}
     }
     void GetNextWaypoint()
     {
@@ -53,5 +72,26 @@ public class EnemyCluster : MonoBehaviour {
     public virtual int livesLostCount()
     {
         return transform.childCount;
+    }
+    public virtual void checkSlowEffect()
+    {
+        int count = 0;
+        foreach (Transform enemy in transform)
+        {
+            if (enemy.GetComponent<Enemy>().getSlowDur() > 0)
+            {
+                speed = (maxSpeed * .5f);
+                break;
+            }
+            else
+            {
+                count++;
+            }
+
+        }
+        if (count == transform.childCount)
+        {
+            speed = maxSpeed;
+        }
     }
 }

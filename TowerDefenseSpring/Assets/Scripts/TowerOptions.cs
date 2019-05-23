@@ -47,7 +47,7 @@ public class TowerOptions : MonoBehaviour {
             sellAmountText.text = "$"+ ((int)((turret.upgradeCost / 2 * .75) + (int)(turret.upgradeCost * 2 * .75) + (int)(turret.upgradeCost * .75))).ToString();
         }
 
-        damageText.text = "Damage: " + Mathf.Round(turret.damage).ToString();
+        damageText.text = "Damage: " + turret.damage.ToString();
         fireRateText.text = "Fire Rate: " + turret.fireRate.ToString();
         rangeText.text = "Range: " + turret.range.ToString();
         if (isDamageTurret)

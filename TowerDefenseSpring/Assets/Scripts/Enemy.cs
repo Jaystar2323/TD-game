@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour {
     public WaveSpawner waveSpawner;
     public ParticleEffects effects;
     public float targetLevel;
+    private float slowDur = 0;
+    private float maxSpeed;
   
 
 
@@ -27,7 +29,7 @@ public class Enemy : MonoBehaviour {
         maxHealth = health;
         effects = this.GetComponent<ParticleEffects>();
         targetLevel = 0;
-        
+        maxSpeed = speed;
         
     }
 
@@ -58,6 +60,18 @@ public class Enemy : MonoBehaviour {
         
         targetLevel = wavepointIndex - (Vector3.Distance(transform.position, target.position) / 100);
         doUpdate();
+
+        if(slowDur > 0)
+        {
+            speed = (maxSpeed * .5f);
+            slowDur -= Time.deltaTime;
+        }
+        if(slowDur <= 0)
+        {
+            slowDur = 0;
+            speed = maxSpeed;
+        }
+
     }
 
     void CheckEffects()
@@ -128,6 +142,10 @@ public class Enemy : MonoBehaviour {
         }
         onHit();
     }
+    public void slowEffect()
+    {
+        slowDur = 3;
+    }
     public virtual void onHit()
     {
         return;
@@ -157,6 +175,10 @@ public class Enemy : MonoBehaviour {
     public virtual void onDeath()
     {
 
+    }
+    public float getSlowDur()
+    {
+        return slowDur;
     }
 
 }

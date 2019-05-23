@@ -13,6 +13,7 @@ public class EnemySplitter : EnemyCluster
         enemySplitter = transform.GetChild(0).gameObject;
         enemySplit.SetActive(false);
         target = Waypoints.points[0];
+        maxSpeed = speed;
     }
     //public override void KillEnemy()
     //{
@@ -53,12 +54,48 @@ public class EnemySplitter : EnemyCluster
     {
         //Debug.Log("death");
         speed = 14;
+        maxSpeed = 14;
         enemySplit.SetActive(true);
         PlayerStats.money += 26;
         foreach (Transform child in enemySplit.transform)
         {
             child.GetComponent<Enemy>().setWaypointIndex(enemySplitter.GetComponent<Enemy>().getWayPointIndex());
             //Debug.Log(enemySplitter.GetComponent<Enemy>().getWayPointIndex());
+        }
+    }
+
+    public override void checkSlowEffect()
+    {
+        int count = 0;
+        if(enemySplitter != null)
+        {
+            if(enemySplitter.GetComponent<Enemy>().getSlowDur() > 0)
+            {
+                speed = maxSpeed * .5f;
+            }
+            else
+            {
+                speed = maxSpeed;
+            }
+            return;
+        }
+        foreach (Transform enemy in enemySplit.transform)
+        {
+            if (enemy.GetComponent<Enemy>().getSlowDur() > 0)
+            {
+                speed = (maxSpeed * .5f);
+                Debug.Log("work");
+
+                break;
+            }
+            else
+            {
+                count++;
+            }
+            if (count == enemySplit.transform.childCount)
+            {
+                speed = maxSpeed;
+            } 
         }
     }
 

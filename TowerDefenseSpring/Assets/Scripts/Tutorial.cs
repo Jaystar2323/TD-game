@@ -24,7 +24,7 @@ public class Tutorial : MonoBehaviour
         {
             tutorialWindow.SetActive(true);
             msg1 = true;
-            textBox.text = "Available towers are displayed at the top and can be placed on the white tiles.";
+            textBox.text = "Available towers are displayed at the top and can be placed on the white tiles. Earn money by killing enemies.";
         }
 
         if(timer >= 8 && !msg2)
@@ -37,7 +37,7 @@ public class Tutorial : MonoBehaviour
         {
             tutorialWindow.SetActive(true);
             msg3 = true;
-            textBox.text = "Level stats are displayed at the bottom. Earn money by killing enemies.";
+            textBox.text = "Level stats are displayed at the bottom. You lose lives when enemies make it to the red block. Game ends if you lose all your lives.";
         }
         if(timer >= 40 && !msg4)
         {
@@ -45,7 +45,7 @@ public class Tutorial : MonoBehaviour
             msg4 = true;
             textBox.text = "Click on placed towers to open the Tower Options window. Towers can be sold and upgraded here.";
         }
-        if(timer >= 120 && !msg5)
+        if(timer >= 105 && !msg5)
         {
             tutorialWindow.SetActive(true);
             msg5 = true;

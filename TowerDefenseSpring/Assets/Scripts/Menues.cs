@@ -24,7 +24,7 @@ public class Menues : MonoBehaviour
     }
     public void loadLevel(int level)
     {
-        SceneManager.LoadScene(level + 2);
+        SceneManager.LoadScene(level + 3);
     }
     public void loadHowToPlay()
     {
@@ -47,6 +47,10 @@ public class Menues : MonoBehaviour
     {
         background2.SetActive(true);
         background1.SetActive(false);
+    }
+    public void loadTutorial()
+    {
+        SceneManager.LoadScene(3);
     }
 
 }

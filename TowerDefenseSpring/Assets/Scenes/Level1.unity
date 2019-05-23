@@ -2617,16 +2617,16 @@ MonoBehaviour:
     timeBetweenSpawns: 2
     waveCount: 10
   wave4:
-    numCluster: 10
+    numCluster: 8
     numCluster2: 0
-    numFast: 0
+    numFast: 5
     numBig: 0
     numNormal: 0
     numFast2: 0
     numSplitter: 0
     numHealer: 0
     timeBetweenSpawns: 2
-    waveCount: 10
+    waveCount: 8
   wave5:
     numCluster: 5
     numCluster2: 0
@@ -2674,7 +2674,7 @@ MonoBehaviour:
   wave9:
     numCluster: 0
     numCluster2: 10
-    numFast: 0
+    numFast: 5
     numBig: 0
     numNormal: 5
     numFast2: 0
@@ -3400,6 +3400,9 @@ MonoBehaviour:
     prefab: {fileID: 0}
     cost: 0
   damageIncrease:
+    prefab: {fileID: 0}
+    cost: 0
+  slowTurret:
     prefab: {fileID: 0}
     cost: 0
 --- !u!4 &781288416 stripped

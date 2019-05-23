@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour {
     private Transform target;
     public float speed = 70f;
     public float explosionRadius = 0;
+    public bool slowTarget = false;
     public GameObject impactEffect;
     public Material defaultMaterial;
     public bool useDefaultMaterial = true;
@@ -94,6 +95,11 @@ public class Bullet : MonoBehaviour {
         else
         {
             enemy.gameObject.GetComponent<Enemy>().damageEnemy(damage);
+        }
+
+        if (slowTarget)
+        {
+            enemy.gameObject.GetComponent<Enemy>().slowEffect();
         }
 
     }

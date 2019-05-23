@@ -9,6 +9,7 @@ public class Shop : MonoBehaviour {
     public TurretBlueprint cannonTurret;
     public TurretBlueprint poisonTurret;
     public TurretBlueprint damageIncrease;
+    public TurretBlueprint slowTurret;
     BuildManager buildManager;
 
     public void Start()
@@ -43,6 +44,11 @@ public class Shop : MonoBehaviour {
     {
         Debug.Log("Damage Increase Turret Purchased");
         buildManager.SelectTurretToBuild(damageIncrease);
+    }
+    public void SelectSlowTurret()
+    {
+        Debug.Log("Slow Turret Purchased");
+        buildManager.SelectTurretToBuild(slowTurret);
     }
 
 }
