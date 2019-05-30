@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class PauseButton : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     public GameObject pauseMenu;
     public static bool active = false;
+
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(TogglePause);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         

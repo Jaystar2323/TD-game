@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menues : MonoBehaviour
 {
     //public WaveSpawner waveSpawner;
     public GameObject background1;
     public GameObject background2;
+    public Text speedValue;
 
     public void loadMainMenu()
     {
@@ -52,5 +54,8 @@ public class Menues : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
-
+    public void onSpeedSliderUpdate(float value)
+    {
+        Debug.Log("hi");
+    }
 }
