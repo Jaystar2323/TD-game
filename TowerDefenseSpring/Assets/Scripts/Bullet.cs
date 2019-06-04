@@ -41,7 +41,13 @@ public class Bullet : MonoBehaviour {
     void HitTarget()
     {
         //impactEffect
-        if(!useDefaultMaterial)
+        Debug.Log("here");
+        if (GetComponent<TurretSound>() != null)
+        {
+            GetComponent<TurretSound>().playSoundEffect();
+            Debug.Log("sound");
+        }
+        if (!useDefaultMaterial)
         {
             impactEffect.GetComponent<ParticleSystemRenderer>().material = target.GetComponent<MeshRenderer>().material;
         }
@@ -62,7 +68,7 @@ public class Bullet : MonoBehaviour {
         {
             Damage(target);
         }
-
+        
         Destroy(gameObject);
     }
 

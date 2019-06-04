@@ -155,6 +155,8 @@ public class Turret : MonoBehaviour {
     {
         GameObject bulletObject = Instantiate(bullet, firePoint.position, firePoint.rotation);
         Bullet bulletS = bulletObject.GetComponent<Bullet>();
+        if(GetComponent<TurretSound>() != null)
+            this.GetComponent<TurretSound>().playSoundEffect();
         if(bulletS != null)
         {
             bulletS.Seek(target);

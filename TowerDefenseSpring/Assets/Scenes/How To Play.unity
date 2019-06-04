@@ -1413,7 +1413,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1635237881}
-        m_MethodName: switchToBackground1
+        m_MethodName: loadTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2713,6 +2713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background1: {fileID: 907709670}
   background2: {fileID: 1056665085}
+  speedValue: {fileID: 0}
 --- !u!1 &1686378243
 GameObject:
   m_ObjectHideFlags: 0

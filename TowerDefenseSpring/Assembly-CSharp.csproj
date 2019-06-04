@@ -63,7 +63,7 @@
      <Compile Include="Assets\Scripts\EnemySplitter.cs" />
      <Compile Include="Assets\Scripts\EnemySplitterBase.cs" />
      <Compile Include="Assets\Scripts\HealthBars.cs" />
-     <Compile Include="Assets\Scripts\Level Select.cs" />
+     <Compile Include="Assets\Scripts\LevelSelect.cs" />
      <Compile Include="Assets\Scripts\Menues.cs" />
      <Compile Include="Assets\Scripts\MoneyUI.cs" />
      <Compile Include="Assets\Scripts\Node.cs" />
@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\TurretDamageBoost.cs" />
      <Compile Include="Assets\Scripts\TurretPoison.cs" />
      <Compile Include="Assets\Scripts\TurretSlow.cs" />
+     <Compile Include="Assets\Scripts\TurretSound.cs" />
      <Compile Include="Assets\Scripts\Tutorial.cs" />
      <Compile Include="Assets\Scripts\WaveList.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
