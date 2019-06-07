@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour {
     public GameObject impactEffect;
     public Material defaultMaterial;
     public bool useDefaultMaterial = true;
+    public GameObject soundObject;
+    public AudioClip sound;
     private float damage;
 
     public void Seek(Transform _target)
@@ -41,12 +43,12 @@ public class Bullet : MonoBehaviour {
     void HitTarget()
     {
         //impactEffect
-        Debug.Log("here");
-        if (GetComponent<TurretSound>() != null)
-        {
-            GetComponent<TurretSound>().playSoundEffect();
-            Debug.Log("sound");
-        }
+       // Debug.Log("here");
+        //if (GetComponent<TurretSound>() != null)
+        //{
+        //    GetComponent<TurretSound>().playSoundEffect();
+        //    Debug.Log("sound");
+        //}
         if (!useDefaultMaterial)
         {
             impactEffect.GetComponent<ParticleSystemRenderer>().material = target.GetComponent<MeshRenderer>().material;
@@ -58,8 +60,15 @@ public class Bullet : MonoBehaviour {
 
         GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 5);
+        if(soundObject != null)
+        {
+            GameObject soundIns = Instantiate(soundObject, transform.position, transform.rotation);
+            soundIns.GetComponent<AudioSource>().clip = sound;
+            soundIns.GetComponent<AudioSource>().Play();
+            Destroy(soundIns, 5);
+        }
 
-        if(explosionRadius > 0f)
+        if (explosionRadius > 0f)
         {
             Explode();
             Damage(target);

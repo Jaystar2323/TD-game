@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretSound : MonoBehaviour
 {
     public AudioClip sound;
+    public float maxVolume = 1;
     void Start()
     {
         GetComponent<AudioSource>().playOnAwake = false;
@@ -15,6 +16,7 @@ public class TurretSound : MonoBehaviour
     public void playSoundEffect()
     {
         //Debug.Log("playing");
+        GetComponent<AudioSource>().volume = CameraControler.soundVolume * maxVolume;
         GetComponent<AudioSource>().Play();
     }
 

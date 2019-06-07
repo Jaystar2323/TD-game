@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\Scoring.cs" />
      <Compile Include="Assets\Scripts\Shop.cs" />
      <Compile Include="Assets\Scripts\SliderText.cs" />
+     <Compile Include="Assets\Scripts\SoundObject.cs" />
      <Compile Include="Assets\Scripts\TowerEffect.cs" />
      <Compile Include="Assets\Scripts\TowerOptions.cs" />
      <Compile Include="Assets\Scripts\Turret.cs" />

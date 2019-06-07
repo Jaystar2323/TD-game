@@ -20,6 +20,9 @@ public class CameraControler : MonoBehaviour {
 
     private bool doMovement = true;
 
+    //Global settings
+    public static float soundVolume;
+
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -79,6 +82,6 @@ public class CameraControler : MonoBehaviour {
         pos.y -= scroll * 500 * scrollSpeed * Time.deltaTime;
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
         transform.position = pos;
-
+        //Debug.Log(soundVolume);
     }
 }

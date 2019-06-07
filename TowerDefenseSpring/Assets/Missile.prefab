@@ -129,6 +129,9 @@ MonoBehaviour:
   impactEffect: {fileID: 95, guid: a08b19edabba44e45b4d6d1608f021b0, type: 3}
   defaultMaterial: {fileID: 2100000, guid: 1a72ad4c70d9c8a408e6d866d4fb21b1, type: 2}
   useDefaultMaterial: 1
+  soundObject: {fileID: 7400973664680838351, guid: e8e0642bf2f95b84abca89cd4a40d027,
+    type: 3}
+  sound: {fileID: 8300000, guid: b1a666a7fd26f2547a44081a3e86ed8f, type: 3}
 --- !u!114 &6301881889986814334
 MonoBehaviour:
   m_ObjectHideFlags: 0

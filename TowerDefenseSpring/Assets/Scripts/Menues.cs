@@ -49,6 +49,7 @@ public class Menues : MonoBehaviour
     {
         background2.SetActive(true);
         background1.SetActive(false);
+        Debug.Log("hi");
     }
     public void loadTutorial()
     {
