@@ -90,8 +90,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c9b8f100b70944aba2e857994046e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 70
+  speed: 80
   explosionRadius: 0
+  slowTarget: 0
   impactEffect: {fileID: 59, guid: 79ad5ef0b3431af4fa119e49586ae64d, type: 3}
   defaultMaterial: {fileID: 2100000, guid: 117f9027f75aa9146a6476b8dbc87549, type: 2}
   useDefaultMaterial: 0
+  soundObject: {fileID: 0}
+  sound: {fileID: 0}
