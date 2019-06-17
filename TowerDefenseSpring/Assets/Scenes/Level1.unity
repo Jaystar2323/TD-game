@@ -2690,10 +2690,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 2087549496}
   HS: {fileID: 1224498609}
-  scoreLC: {fileID: 0}
-  moneyLC: {fileID: 0}
-  hsLC: {fileID: 0}
-  livesLC: {fileID: 0}
+  scoreLC: {fileID: 934657389}
+  moneyLC: {fileID: 358229013}
+  hsLC: {fileID: 515412855}
+  livesLC: {fileID: 913626506}
 --- !u!114 &393098911
 MonoBehaviour:
   m_ObjectHideFlags: 0

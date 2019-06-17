@@ -10619,10 +10619,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 938789741}
   HS: {fileID: 2053583582}
-  scoreLC: {fileID: 0}
-  moneyLC: {fileID: 0}
-  hsLC: {fileID: 0}
-  livesLC: {fileID: 0}
+  scoreLC: {fileID: 2080300491}
+  moneyLC: {fileID: 786328203}
+  hsLC: {fileID: 397341780}
+  livesLC: {fileID: 22293377}
 --- !u!114 &1789548328
 MonoBehaviour:
   m_ObjectHideFlags: 0

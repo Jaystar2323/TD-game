@@ -202,10 +202,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 158020057}
   HS: {fileID: 1552188240}
-  scoreLC: {fileID: 0}
-  moneyLC: {fileID: 0}
-  hsLC: {fileID: 0}
-  livesLC: {fileID: 0}
+  scoreLC: {fileID: 693510173}
+  moneyLC: {fileID: 1311866822}
+  hsLC: {fileID: 1688279055}
+  livesLC: {fileID: 91841609}
 --- !u!114 &17812868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3201,7 +3201,6 @@ GameObject:
   - component: {fileID: 618220935}
   - component: {fileID: 618220937}
   - component: {fileID: 618220938}
-  - component: {fileID: 618220939}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -3460,24 +3459,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 500
---- !u!114 &618220939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 618220934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e498069ffcff843bbee18bca524cac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 1525922999}
-  HS: {fileID: 1688279055}
-  scoreLC: {fileID: 693510173}
-  moneyLC: {fileID: 1311866822}
-  hsLC: {fileID: 1688279055}
-  livesLC: {fileID: 91841609}
 --- !u!1001 &650290622
 PrefabInstance:
   m_ObjectHideFlags: 0
